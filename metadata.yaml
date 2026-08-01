@@ -1,6 +1,6 @@
 name: feishu_yuan_helper
-display_name: 代号鸢兑换
-desc: 飞书私聊绑定代号鸢账号并批量兑换全局兑换码的 AstrBot 插件。
-version: v1.0.0
+display_name: 代号鸢同步
+desc: 通过飞书私聊命令触发密探和关卡数据同步的 AstrBot 插件。
+version: v1.1.0
 author: mrsnake
 repo: https://github.com/MrSnake0208/feishu-yuan-helper
