@@ -29,7 +29,7 @@ class YuanSyncPlugin(Star):
         logger.info("代号鸢同步插件已初始化")
 
     @filter.command("同步密探")
-    async def sync_agents_command(self, event: AstrMessageEvent, *_command_args):
+    async def sync_agents_command(self, event: AstrMessageEvent, _=None, __=None):
         """触发密探数据同步。"""
         private_guard = self._ensure_private_chat(event)
         if private_guard is not None:
@@ -45,7 +45,7 @@ class YuanSyncPlugin(Star):
         event.stop_event()
 
     @filter.command("同步关卡")
-    async def sync_levels_command(self, event: AstrMessageEvent, *_command_args):
+    async def sync_levels_command(self, event: AstrMessageEvent, _=None, __=None):
         """触发关卡数据同步。"""
         private_guard = self._ensure_private_chat(event)
         if private_guard is not None:
