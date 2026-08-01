@@ -1,6 +1,6 @@
-# astrbot-plugin-yuan-redeem
+# feishu-yuan-helper
 
-一个用于 AstrBot 的代号鸢兑换插件。
+一个用于飞书（AstrBot）的代号鸢兑换助手插件。
 
 ## 功能
 

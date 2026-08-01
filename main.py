@@ -220,7 +220,7 @@ class RedeemStore:
         return datetime.now().isoformat(timespec="seconds")
 
 
-@register("astrbot_plugin_yuan_redeem", "mrsnake", "代号鸢兑换插件", "1.0.0")
+@register("feishu_yuan_helper", "mrsnake", "代号鸢兑换插件", "1.0.0")
 class YuanRedeemPlugin(Star):
     def __init__(self, context: Context):
         super().__init__(context)

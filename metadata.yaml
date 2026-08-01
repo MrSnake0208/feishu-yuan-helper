@@ -1,6 +1,6 @@
-name: astrbot_plugin_yuan_redeem
+name: feishu_yuan_helper
 display_name: 代号鸢兑换
-desc: 私聊绑定代号鸢账号并批量兑换全局兑换码的 AstrBot 插件。
+desc: 飞书私聊绑定代号鸢账号并批量兑换全局兑换码的 AstrBot 插件。
 version: v1.0.0
 author: mrsnake
-repo: https://github.com/mrsnake/astrbot-plugin-yuan-redeem
+repo: https://github.com/MrSnake0208/feishu-yuan-helper
