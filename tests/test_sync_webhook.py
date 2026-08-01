@@ -100,6 +100,24 @@ class SyncWebhookTests(unittest.TestCase):
         self.assertIsNone(result.status_code)
         self.assertEqual('关卡同步触发失败：offline', result.detail)
 
+    def test_command_handlers_accept_extra_framework_argument(self):
+        event = Mock()
+        event.is_private_chat.return_value = True
+        event.is_admin.return_value = False
+        event.plain_result.side_effect = lambda message: message
+
+        for handler in (
+            self.plugin.sync_agents_command,
+            self.plugin.sync_levels_command,
+        ):
+            async def consume():
+                return [item async for item in handler(event, '')]
+
+            results = asyncio.run(consume())
+            self.assertEqual(1, len(results))
+            self.assertIn('权限不足', results[0])
+            event.stop_event.assert_called()
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -52,6 +52,12 @@ class CommandRegistrationTests(unittest.TestCase):
             self.assertIn('self._is_admin(event)', method_src)
             self.assertIn('self._ensure_private_chat(event)', method_src)
 
+    def test_sync_commands_accept_extra_framework_arguments(self):
+        for method_name in ('sync_agents_command', 'sync_levels_command'):
+            method = self.methods[method_name]
+            self.assertIsNotNone(method.args.vararg)
+            self.assertEqual('_command_args', method.args.vararg.arg)
+
 
 if __name__ == '__main__':
     unittest.main()
