@@ -9,7 +9,7 @@ from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.star import Context, Star, register
 
 
-SYNC_WEBHOOK_ENDPOINT = "http://192.168.31.66:28793"
+SYNC_WEBHOOK_ENDPOINT = "http://192.168.31.66:28793/webhook"
 HTTP_TIMEOUT_SECONDS = 15
 
 
